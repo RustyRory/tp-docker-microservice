@@ -1,0 +1,12 @@
+version: "3"
+services:
+  service-user:
+    build: ./service-user
+    ports:
+      - "5001:5001"
+  service-order:
+    build: ./service-order
+    ports:
+      - "5002:5002"
+    depends_on:
+      - service-user
