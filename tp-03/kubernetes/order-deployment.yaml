@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-order
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-order
+  template:
+    metadata:
+      labels:
+        app: service-order
+    spec:
+      containers:
+        - name: service-order
+          image: service-order:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5002

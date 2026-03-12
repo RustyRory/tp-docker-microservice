@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-order
+spec:
+  selector:
+    app: service-order
+  ports:
+    - protocol: TCP
+      port: 80 # Port exposé du service Kubernetes
+      targetPort: 5002 # Port du conteneur
+  type: LoadBalancer # Permet un accès depuis l’extérieur via Minikube

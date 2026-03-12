@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-user
+spec:
+  selector:
+    app: service-user
+  ports:
+    - protocol: TCP
+      port: 5001 # Port du service Kubernetes
+      targetPort: 5001 # Port du conteneur
+  type: ClusterIP # Accessible uniquement depuis le cluster

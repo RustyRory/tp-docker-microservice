@@ -114,7 +114,7 @@ tp-docker-microservice
 └── requirements.txt
 ```
 
-# 6️⃣ Construire l'image Docker
+# Construire l'image Docker
 
 Dans le dossier du projet, lancer :
 

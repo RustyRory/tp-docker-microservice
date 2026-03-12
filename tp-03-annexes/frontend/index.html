@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Frontend</title>
+  </head>
+  <body>
+    <h1>Frontend</h1>
+    <p id="msg">Chargement...</p>
+
+    <script>
+      fetch("http://192.168.49.2:30080/api/message")
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("msg").innerText =
+            "Message du backend : " + data.message;
+        });
+    </script>
+  </body>
+</html>
